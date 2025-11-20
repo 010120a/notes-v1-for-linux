@@ -53,10 +53,9 @@ def refresh_notes_list():
 
 def vspliv(text, rod):
     app1 = ctk.CTkToplevel(rod)
-    app1.geometry('150x120')
+    app1.geometry('300x150')
     app1.title('ошибка!')
     app1.transient(win)     # Привязка к родителю
-    app1.grab_set()         # Модальное окно
     app1.lift()             # Поднимаем наверх
     app1.focus_force()
     label = ctk.CTkLabel(master=app1, text=text)
@@ -68,10 +67,9 @@ def add_note():
     """Создать новую заметку."""
     global notes
     app1 = ctk.CTkToplevel(win)
-    app1.geometry('300x260')
-    app1.title('Проценты')
+    app1.geometry('300x150')
+    app1.title('Создать заметку')
     app1.transient(win)     # Привязка к родителю
-    app1.grab_set()         # Модальное окно
     app1.lift()             # Поднимаем наверх
     app1.focus_force()      # Передаём фокус
     entry1 = ctk.CTkEntry(master=app1, width=280, height=30, placeholder_text='введите название...')
